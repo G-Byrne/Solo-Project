@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import MainContainer from './containers/MainContainer.jsx';
+// import MainContainer from './containers/MainContainer.jsx';
 
 const App = () => {
   return <div>Something to render on screen!</div>;

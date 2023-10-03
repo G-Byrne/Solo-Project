@@ -1,13 +1,13 @@
 import React from 'react';
-//import { render } from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './App';
-import store from './store';
-import styles from './scss/application.scss'; // eslint-disable-line no-unused-vars
+import App from './App.jsx';
+// import store from './store';
+import styles from './styles.css'; // eslint-disable-line no-unused-vars
 
-const root = createRoot(document.getElementById('contents'));
-root.render(
-  <Provider store={store}>
+render(
+  <Provider>
     <App />
-  </Provider>
+  </Provider>,
+  document.getElementById('root')
 );

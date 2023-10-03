@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './client.index.js',
+  entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
@@ -12,11 +12,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.(js|jsz)$/,
+        test: /.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/env', '@babel/react'],
+          plugins: [
+            '@babel/plugin-transform-runtime',
+            '@babel/transform-async-to-generator',
+          ],
         },
+      },
+      {
+        test: /\.s?css/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
