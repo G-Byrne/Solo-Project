@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,8 +31,8 @@ module.exports = {
   },
   devServer: {
     static: {
-      publicPath: '/',
-      directory: path.resolve(__dirname),
+      publicPath: '/dist',
+      directory: path.resolve(__dirname, 'dist'),
     },
   },
   plugins: [
