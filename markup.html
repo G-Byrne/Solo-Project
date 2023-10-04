@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Application Tracker</title>
+  </head>
+  <body>
+    <h1>Job Application Tracker</h1>
+    <div id="root"></div>
+
+    <div container="App">
+      <div container="MainContainer">
+        <div component="user">
+          <form>
+            <label>Username: </label>
+            <input />
+            <button>Get My Applications</button>
+          </form>
+        </div>
+
+        <div component="Totals Display">
+          <label>Total Applications: </label><input value="state.totalJobs" />
+          <label>Tracked Jobs: </label
+          ><input value="(state.totalApps - state.appliedTo)" />
+        </div>
+
+        <div container="Job Application Container">
+          <div component="Application Creator">
+            <form>
+              <label>Company Name: </label
+              ><input value-to-set: state.companyName />
+              <label>Job Title: </label
+              ><input value-to-set: state.newJobTitle />
+              <label>Applied on: </label
+              ><input value-to-set: state.newAppSite />
+              <label>Application Link: </label
+              ><input value-to-set: state.newAppLink /> <label>Notes: </label
+              ><input value-to-set: state.newNotes />
+              <button onclick="addToAppsReducer">Submit</button>
+              <button onclick="updateCss" and setNewApplied>Applied</button>
+            </form>
+          </div>
+
+          <div container="Applications">
+            <div components="application card">
+              <div class="application">
+                <Application />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
