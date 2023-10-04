@@ -11,7 +11,7 @@ const totalApps = useSelector((state) => state.totalApps);
 const appliedTo = useSelector((state) => state.appliedTo);
 
 const MainContainer = () => {
-  const getUser = (username) => dispatch(actions.getUser(username));
+  const getUser = () => dispatch(actions.getUser());
   const updateUsername = (username) => dispatch(actions.updateUser(username));
 
   return (

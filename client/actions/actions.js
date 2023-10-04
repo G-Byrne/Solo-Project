@@ -1,6 +1,5 @@
-export const getUser = (username) => ({
+export const getUser = () => ({
   type: 'GET_USER',
-  payload: username,
 });
 
 export const updateUsername = (username) => ({
