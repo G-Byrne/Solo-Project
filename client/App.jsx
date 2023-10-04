@@ -16,6 +16,7 @@ const App = () => {
   return (
     <div>
       <p>Something new!</p>
+      <MainContainer />
     </div>
   );
 };

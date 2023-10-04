@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const AppDisplay = (props) => {
   const apps = [];
-  const appsList = useSelector((state) => state.jobs);
+  const appsList = useSelector((state) => state.apps);
 
   for (const app of appsList) {
     apps.push(<Application app={app} />);
