@@ -4,7 +4,16 @@ import { types } from 'sass';
 
 const initialState = {
   user: '',
-  apps: [],
+  apps: [
+    {
+      jobTitle: '',
+      company: '',
+      site: '',
+      jobLink: '',
+      notes: '',
+      applied: false,
+    },
+  ],
   totalApps: 0,
   appliedTo: 0,
   newCompanyName: '',

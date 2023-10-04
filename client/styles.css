@@ -1,8 +1,134 @@
 * {
   box-sizing: border-box;
   font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
-  margin: 0;
+  margin: 10;
   padding: 0;
-  color: #000000;
-  background-color: #6d6d6d;
+  color: #313131;
+  background-color: #eef2e2;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.308);
+  font-size: 30px;
+  width: 600px;
+  margin: 20px;
+}
+
+#userform {
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#username {
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#nameinput {
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#get-applications {
+  color: #313131;
+  background-color: #cbf078;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.totalsBox {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.308);
+  font-size: 30px;
+}
+
+.counter {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.totals {
+  margin: 20px 5px 20px 20px;
+  background-color: #ffffff;
+}
+
+.count {
+  margin: 20px 5px;
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.308);
+}
+
+.newAppBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.308);
+}
+
+#newApp {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#appForm {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffebbb;
+  border: 1px solid #ffebbb;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.308);
+  width: 600px;
+}
+
+.appLabel {
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+.appInput {
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#appNotes {
+  height: 200px;
+}
+
+#submit-app {
+  background-color: #cbf078;
+  border-radius: 4px;
+  width: 100px;
 }

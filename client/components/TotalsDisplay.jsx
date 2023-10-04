@@ -2,11 +2,15 @@ import React from 'react';
 
 const TotalsDisplay = (props) => {
   return (
-    <div>
-      <label>Total Applications: </label>
-      <p>{props.totalApps}</p>
-      <label>Applied To: </label>
-      <p>{props.appliedTo}</p>
+    <div className='totalsBox'>
+      <div className='counter'>
+        <label className='totals'>Total Applications: </label>
+        <span className='count'>{props.totalApps}</span>
+      </div>
+      <div className='counter'>
+        <label className='totals'>Applied To: </label>
+        <span className='count'>{props.appliedTo}</span>
+      </div>
     </div>
   );
 };

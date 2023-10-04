@@ -15,7 +15,7 @@ const MainContainer = () => {
   const appliedTo = useSelector((state) => state.appliedTo);
 
   return (
-    <div className='container'>
+    <div className='mainContainer'>
       <User
         getUser={getUser}
         updateUsername={updateUsername}

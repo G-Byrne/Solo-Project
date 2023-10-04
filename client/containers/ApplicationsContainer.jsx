@@ -15,7 +15,7 @@ const ApplicationsContainer = () => {
   const createApp = () => dispatch(actions.createApp());
 
   return (
-    <div>
+    <div className='appContainer'>
       <NewAppCreator
         createApp={createApp}
         updateCompany={updateCompany}

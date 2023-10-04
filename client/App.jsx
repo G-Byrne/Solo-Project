@@ -14,8 +14,7 @@ import MainContainer from './containers/MainContainer.jsx';
 
 const App = () => {
   return (
-    <div>
-      <p>Something new!</p>
+    <div id='app'>
       <MainContainer />
     </div>
   );

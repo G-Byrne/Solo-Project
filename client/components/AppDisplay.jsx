@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Application from './Application.jsx';
 
 const AppDisplay = (props) => {
   const apps = [];
   const appsList = useSelector((state) => state.apps);
 
-  for (const app of appsList) {
-    apps.push(<Application app={app} />);
+  for (let i = 0; i < appsList.length; i++) {
+    apps.push(<Application key={i} app={appsList[i]} />);
   }
 
   return (
