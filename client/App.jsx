@@ -13,7 +13,9 @@ import React from 'react';
 // import MainContainer from './containers/MainContainer.jsx';
 
 const App = () => {
-  return <div>Something to render on screen!</div>;
+  return <div>
+    <p>Something new!</p>
+  </div>;
 };
 
 export default App;
