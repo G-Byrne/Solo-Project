@@ -4,7 +4,7 @@
   "description": "Solo Project - Job Application Tracker",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack server --hot --progress",
+    "start": "nodemon ./server/server.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

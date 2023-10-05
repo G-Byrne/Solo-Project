@@ -15,7 +15,7 @@ const initialState = {
   newApplied: false,
 };
 
-const appReducer = (state = initialState, action) => {
+const appReducer = async (state = initialState, action) => {
   let apps;
   let totalApps;
   let appliedTo;
@@ -35,6 +35,17 @@ const appReducer = (state = initialState, action) => {
       };
       apps = state.apps.slice();
       apps.push(newApp);
+
+      const response = await fetch('../users/newapp', {
+        method: 'POST',
+        body: JSON.stringify({ username: state.user, newApp }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.status === 200) {
+        console.log('Good response from server. New app saved!');
+      } else {
+        console.log('something went wrong in adding app');
+      }
 
       return {
         ...state,
