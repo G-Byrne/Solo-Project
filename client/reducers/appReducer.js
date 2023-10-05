@@ -4,16 +4,7 @@ import { types } from 'sass';
 
 const initialState = {
   user: '',
-  apps: [
-    {
-      jobTitle: '',
-      company: '',
-      site: '',
-      jobLink: '',
-      notes: '',
-      applied: false,
-    },
-  ],
+  apps: [],
   totalApps: 0,
   appliedTo: 0,
   newCompanyName: '',
@@ -25,7 +16,40 @@ const initialState = {
 };
 
 const appReducer = (state = initialState, action) => {
+  let apps;
+  let totalApps;
+  let appliedTo;
+
   switch (action.type) {
+    case 'CREATE_APP': {
+      totalApps = state.totalApps + 1;
+      appliedTo = state.appliedTo + 1;
+
+      const newApp = {
+        jobTitle: state.newJobTitle,
+        company: state.newCompanyName,
+        site: state.newAppSite,
+        jobLink: state.newAppLink,
+        notes: state.newNotes,
+        applied: true,
+      };
+      apps = state.apps.slice();
+      apps.push(newApp);
+
+      return {
+        ...state,
+        apps,
+        totalApps,
+        appliedTo,
+        newCompanyName: '',
+        newJobTitle: '',
+        newAppLink: '',
+        newAppSite: '',
+        newNotes: '',
+        newApplied: false,
+      };
+    }
+
     case 'UPDATE_USER': {
       return {
         ...state,

@@ -4,7 +4,7 @@ const NewAppCreator = (props) => {
   return (
     <div className='newAppBox'>
       <p id='newApp'>New Application!</p>
-      <form id='appForm' onSubmit={props.createApp()}>
+      <form id='appForm' onSubmit={() => props.createApp()}>
         <label className='appLabel'>Company Name: </label>
         <input
           id='company'
